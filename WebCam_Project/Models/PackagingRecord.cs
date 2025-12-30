@@ -32,5 +32,14 @@ namespace WebCam_Project.Models
 
         [Column("created_at")]
         public DateTime CreatedAt { get; set; }
+
+        /* ===== USER LINK ===== */
+
+        [Required]
+        [Column("user_id")]
+        public long UserId { get; set; }
+
+        [ForeignKey(nameof(UserId))]
+        public User User { get; set; } = null!;
     }
 }

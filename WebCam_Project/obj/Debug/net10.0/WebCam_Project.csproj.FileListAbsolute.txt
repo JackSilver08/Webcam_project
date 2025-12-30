@@ -1,12 +1,3 @@
-D:\WebCam_Project\WebCam_Project\obj\Debug\net10.0\WebCam_Project.csproj.AssemblyReference.cache
-D:\WebCam_Project\WebCam_Project\obj\Debug\net10.0\rpswa.dswa.cache.json
-D:\WebCam_Project\WebCam_Project\obj\Debug\net10.0\WebCam_Project.GeneratedMSBuildEditorConfig.editorconfig
-D:\WebCam_Project\WebCam_Project\obj\Debug\net10.0\WebCam_Project.AssemblyInfoInputs.cache
-D:\WebCam_Project\WebCam_Project\obj\Debug\net10.0\WebCam_Project.AssemblyInfo.cs
-D:\WebCam_Project\WebCam_Project\obj\Debug\net10.0\WebCam_Project.csproj.CoreCompileInputs.cache
-D:\WebCam_Project\WebCam_Project\obj\Debug\net10.0\WebCam_Project.MvcApplicationPartsAssemblyInfo.cache
-D:\WebCam_Project\WebCam_Project\obj\Debug\net10.0\WebCam_Project.RazorAssemblyInfo.cache
-D:\WebCam_Project\WebCam_Project\obj\Debug\net10.0\WebCam_Project.RazorAssemblyInfo.cs
 D:\WebCam_Project\WebCam_Project\bin\Debug\net10.0\appsettings.Development.json
 D:\WebCam_Project\WebCam_Project\bin\Debug\net10.0\appsettings.json
 D:\WebCam_Project\WebCam_Project\bin\Debug\net10.0\WebCam_Project.staticwebassets.runtime.json
@@ -16,6 +7,7 @@ D:\WebCam_Project\WebCam_Project\bin\Debug\net10.0\WebCam_Project.deps.json
 D:\WebCam_Project\WebCam_Project\bin\Debug\net10.0\WebCam_Project.runtimeconfig.json
 D:\WebCam_Project\WebCam_Project\bin\Debug\net10.0\WebCam_Project.dll
 D:\WebCam_Project\WebCam_Project\bin\Debug\net10.0\WebCam_Project.pdb
+D:\WebCam_Project\WebCam_Project\bin\Debug\net10.0\BCrypt.Net-Next.dll
 D:\WebCam_Project\WebCam_Project\bin\Debug\net10.0\Humanizer.dll
 D:\WebCam_Project\WebCam_Project\bin\Debug\net10.0\Microsoft.Build.dll
 D:\WebCam_Project\WebCam_Project\bin\Debug\net10.0\Microsoft.Build.Framework.dll
@@ -116,6 +108,16 @@ D:\WebCam_Project\WebCam_Project\bin\Debug\net10.0\tr\Microsoft.CodeAnalysis.Wor
 D:\WebCam_Project\WebCam_Project\bin\Debug\net10.0\zh-Hans\Microsoft.CodeAnalysis.Workspaces.MSBuild.resources.dll
 D:\WebCam_Project\WebCam_Project\bin\Debug\net10.0\zh-Hant\Microsoft.CodeAnalysis.Workspaces.MSBuild.resources.dll
 D:\WebCam_Project\WebCam_Project\bin\Debug\net10.0\runtimes\win\lib\net9.0\System.Windows.Extensions.dll
+D:\WebCam_Project\WebCam_Project\obj\Debug\net10.0\WebCam_Project.csproj.AssemblyReference.cache
+D:\WebCam_Project\WebCam_Project\obj\Debug\net10.0\rpswa.dswa.cache.json
+D:\WebCam_Project\WebCam_Project\obj\Debug\net10.0\WebCam_Project.GeneratedMSBuildEditorConfig.editorconfig
+D:\WebCam_Project\WebCam_Project\obj\Debug\net10.0\WebCam_Project.AssemblyInfoInputs.cache
+D:\WebCam_Project\WebCam_Project\obj\Debug\net10.0\WebCam_Project.AssemblyInfo.cs
+D:\WebCam_Project\WebCam_Project\obj\Debug\net10.0\WebCam_Project.csproj.CoreCompileInputs.cache
+D:\WebCam_Project\WebCam_Project\obj\Debug\net10.0\WebCam_Project.MvcApplicationPartsAssemblyInfo.cache
+D:\WebCam_Project\WebCam_Project\obj\Debug\net10.0\WebCam_Project.RazorAssemblyInfo.cache
+D:\WebCam_Project\WebCam_Project\obj\Debug\net10.0\WebCam_Project.RazorAssemblyInfo.cs
+D:\WebCam_Project\WebCam_Project\obj\Debug\net10.0\WebCam_Project.sourcelink.json
 D:\WebCam_Project\WebCam_Project\obj\Debug\net10.0\rjimswa.dswa.cache.json
 D:\WebCam_Project\WebCam_Project\obj\Debug\net10.0\rjsmrazor.dswa.cache.json
 D:\WebCam_Project\WebCam_Project\obj\Debug\net10.0\rjsmcshtml.dswa.cache.json

@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "ExWCCdRU17U=",
+  "dgSpecHash": "RMk9Fc8x3R0=",
   "success": true,
   "projectFilePath": "D:\\WebCam_Project\\WebCam_Project\\WebCam_Project.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\ADMIN\\.nuget\\packages\\bcrypt.net-next\\4.0.3\\bcrypt.net-next.4.0.3.nupkg.sha512",
     "C:\\Users\\ADMIN\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
     "C:\\Users\\ADMIN\\.nuget\\packages\\microsoft.build\\17.7.2\\microsoft.build.17.7.2.nupkg.sha512",
     "C:\\Users\\ADMIN\\.nuget\\packages\\microsoft.build.framework\\17.14.28\\microsoft.build.framework.17.14.28.nupkg.sha512",
