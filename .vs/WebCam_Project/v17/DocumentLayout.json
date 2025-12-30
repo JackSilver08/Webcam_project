@@ -1,0 +1,174 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\WebCam_Project\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{81EBDC4D-0BE4-44E4-ABC2-A4EEA750A031}|WebCam_Project\\WebCam_Project.csproj|d:\\webcam_project\\webcam_project\\pages\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{81EBDC4D-0BE4-44E4-ABC2-A4EEA750A031}|WebCam_Project\\WebCam_Project.csproj|solutionrelative:webcam_project\\pages\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{81EBDC4D-0BE4-44E4-ABC2-A4EEA750A031}|WebCam_Project\\WebCam_Project.csproj|d:\\webcam_project\\webcam_project\\pages\\shared\\_viewimports.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{81EBDC4D-0BE4-44E4-ABC2-A4EEA750A031}|WebCam_Project\\WebCam_Project.csproj|solutionrelative:webcam_project\\pages\\shared\\_viewimports.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{81EBDC4D-0BE4-44E4-ABC2-A4EEA750A031}|WebCam_Project\\WebCam_Project.csproj|d:\\webcam_project\\webcam_project\\pages\\index.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{81EBDC4D-0BE4-44E4-ABC2-A4EEA750A031}|WebCam_Project\\WebCam_Project.csproj|solutionrelative:webcam_project\\pages\\index.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{81EBDC4D-0BE4-44E4-ABC2-A4EEA750A031}|WebCam_Project\\WebCam_Project.csproj|d:\\webcam_project\\webcam_project\\dbcontext\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{81EBDC4D-0BE4-44E4-ABC2-A4EEA750A031}|WebCam_Project\\WebCam_Project.csproj|solutionrelative:webcam_project\\dbcontext\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{81EBDC4D-0BE4-44E4-ABC2-A4EEA750A031}|WebCam_Project\\WebCam_Project.csproj|d:\\webcam_project\\webcam_project\\models\\packagingrecord.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{81EBDC4D-0BE4-44E4-ABC2-A4EEA750A031}|WebCam_Project\\WebCam_Project.csproj|solutionrelative:webcam_project\\models\\packagingrecord.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{81EBDC4D-0BE4-44E4-ABC2-A4EEA750A031}|WebCam_Project\\WebCam_Project.csproj|d:\\webcam_project\\webcam_project\\webcam_project.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{81EBDC4D-0BE4-44E4-ABC2-A4EEA750A031}|WebCam_Project\\WebCam_Project.csproj|solutionrelative:webcam_project\\webcam_project.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{81EBDC4D-0BE4-44E4-ABC2-A4EEA750A031}|WebCam_Project\\WebCam_Project.csproj|d:\\webcam_project\\webcam_project\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{81EBDC4D-0BE4-44E4-ABC2-A4EEA750A031}|WebCam_Project\\WebCam_Project.csproj|solutionrelative:webcam_project\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{81EBDC4D-0BE4-44E4-ABC2-A4EEA750A031}|WebCam_Project\\WebCam_Project.csproj|d:\\webcam_project\\webcam_project\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{81EBDC4D-0BE4-44E4-ABC2-A4EEA750A031}|WebCam_Project\\WebCam_Project.csproj|solutionrelative:webcam_project\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 8,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{b1e99781-ab81-11d0-b683-00aa00a3ee26}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{eefa5220-e298-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{75188d03-9892-4ae2-abf1-207126247ce5}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:129:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "WebCam_Project.csproj",
+              "DocumentMoniker": "D:\\WebCam_Project\\WebCam_Project\\WebCam_Project.csproj",
+              "RelativeDocumentMoniker": "WebCam_Project\\WebCam_Project.csproj",
+              "ToolTip": "D:\\WebCam_Project\\WebCam_Project\\WebCam_Project.csproj",
+              "RelativeToolTip": "WebCam_Project\\WebCam_Project.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-12-29T13:34:18.411Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Index.cshtml.cs",
+              "DocumentMoniker": "D:\\WebCam_Project\\WebCam_Project\\Pages\\Index.cshtml.cs",
+              "RelativeDocumentMoniker": "WebCam_Project\\Pages\\Index.cshtml.cs",
+              "ToolTip": "D:\\WebCam_Project\\WebCam_Project\\Pages\\Index.cshtml.cs",
+              "RelativeToolTip": "WebCam_Project\\Pages\\Index.cshtml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAEAAAAAyAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-29T08:25:17.37Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\WebCam_Project\\WebCam_Project\\Program.cs",
+              "RelativeDocumentMoniker": "WebCam_Project\\Program.cs",
+              "ToolTip": "D:\\WebCam_Project\\WebCam_Project\\Program.cs",
+              "RelativeToolTip": "WebCam_Project\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-29T13:40:14.613Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "D:\\WebCam_Project\\WebCam_Project\\Pages\\Index.cshtml",
+              "RelativeDocumentMoniker": "WebCam_Project\\Pages\\Index.cshtml",
+              "ToolTip": "D:\\WebCam_Project\\WebCam_Project\\Pages\\Index.cshtml",
+              "RelativeToolTip": "WebCam_Project\\Pages\\Index.cshtml",
+              "ViewState": "AgIAAIEBAAAAAAAAAAAkwJ0BAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-12-29T08:16:21.409Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "_ViewImports.cshtml",
+              "DocumentMoniker": "D:\\WebCam_Project\\WebCam_Project\\Pages\\Shared\\_ViewImports.cshtml",
+              "RelativeDocumentMoniker": "WebCam_Project\\Pages\\Shared\\_ViewImports.cshtml",
+              "ToolTip": "D:\\WebCam_Project\\WebCam_Project\\Pages\\Shared\\_ViewImports.cshtml",
+              "RelativeToolTip": "WebCam_Project\\Pages\\Shared\\_ViewImports.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAAvAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-12-30T01:34:38.151Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "PackagingRecord.cs",
+              "DocumentMoniker": "D:\\WebCam_Project\\WebCam_Project\\Models\\PackagingRecord.cs",
+              "RelativeDocumentMoniker": "WebCam_Project\\Models\\PackagingRecord.cs",
+              "ToolTip": "D:\\WebCam_Project\\WebCam_Project\\Models\\PackagingRecord.cs",
+              "RelativeToolTip": "WebCam_Project\\Models\\PackagingRecord.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-29T13:38:45.028Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "AppDbContext.cs",
+              "DocumentMoniker": "D:\\WebCam_Project\\WebCam_Project\\DBcontext\\AppDbContext.cs",
+              "RelativeDocumentMoniker": "WebCam_Project\\DBcontext\\AppDbContext.cs",
+              "ToolTip": "D:\\WebCam_Project\\WebCam_Project\\DBcontext\\AppDbContext.cs",
+              "RelativeToolTip": "WebCam_Project\\DBcontext\\AppDbContext.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACUAAAA1AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-29T13:39:36.204Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "D:\\WebCam_Project\\WebCam_Project\\appsettings.json",
+              "RelativeDocumentMoniker": "WebCam_Project\\appsettings.json",
+              "ToolTip": "D:\\WebCam_Project\\WebCam_Project\\appsettings.json",
+              "RelativeToolTip": "WebCam_Project\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-12-29T13:32:38.661Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
