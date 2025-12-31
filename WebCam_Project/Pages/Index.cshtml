@@ -852,10 +852,11 @@
             scanBuffer = "";
 
             if (!code) return;
-            if (scannedSet.has(code)) {
-                setStatus("❌ Mã đã tồn tại", "danger");
-                return;
-            }
+                if (scannedSet.has(code)) {
+        // Quét trùng → reset toàn bộ về trạng thái ban đầu
+        resetToIdle();
+        return;
+    }
 
             scannedSet.add(code);
             appendLog(code);
@@ -1016,5 +1017,32 @@
             alert("❌ Đăng xuất thất bại");
         }
     }
-    
+
+
+        function resetToIdle() {
+        // Stop recorder nếu còn chạy
+        if (mediaRecorder && mediaRecorder.state !== "inactive") {
+            mediaRecorder.stop();
+        }
+
+        // Stop camera
+        if (stream) {
+            stream.getTracks().forEach(t => t.stop());
+            stream = null;
+            video.srcObject = null;
+        }
+
+        // Reset timer
+        resetTimer();
+
+        // Reset state
+        running = false;
+        recordedChunks = [];
+
+        // Reset UI
+        btnStart.disabled = false;
+        btnStop.disabled = true;
+
+        setStatus("⚪ Chưa bắt đầu", "secondary");
+    }
 </script>

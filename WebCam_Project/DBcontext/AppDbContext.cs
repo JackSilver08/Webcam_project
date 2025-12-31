@@ -66,7 +66,7 @@ namespace WebCam_Project.DBContext
             /* ================= PACKAGING RECORD ================= */
             modelBuilder.Entity<PackagingRecord>(entity =>
             {
-                entity.ToTable("packaging_records");
+                entity.ToTable("packaging_records", "public");
 
                 entity.HasKey(e => e.Id);
 

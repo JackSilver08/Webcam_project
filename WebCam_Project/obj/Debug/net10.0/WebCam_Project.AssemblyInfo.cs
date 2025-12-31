@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("WebCam_Project")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+1325efd99fd108656015f2cede3f458f18bb5a7d")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+4a80b69f4898a4a6d568af55caae3541e5f089b6")]
 [assembly: System.Reflection.AssemblyProductAttribute("WebCam_Project")]
 [assembly: System.Reflection.AssemblyTitleAttribute("WebCam_Project")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

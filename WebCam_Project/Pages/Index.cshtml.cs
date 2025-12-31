@@ -57,11 +57,13 @@ namespace WebCam_Project.Pages
             }
 
             var claims = new List<Claim>
-            {
-                new Claim(ClaimTypes.Name, user.Username),
-                new Claim("UserId", user.Id.ToString()),
-                new Claim(ClaimTypes.Role, user.Role)
-            };
+{
+    new Claim(ClaimTypes.NameIdentifier, user.Id.ToString()),
+    new Claim(ClaimTypes.Name, user.Username),
+    new Claim(ClaimTypes.Role, user.Role)
+};
+
+
 
             var identity = new ClaimsIdentity(
                 claims,
@@ -130,8 +132,9 @@ namespace WebCam_Project.Pages
 
             try
             {
-                var userId = long.Parse(
-                    User.FindFirst("UserId")!.Value);
+                var claim = User.FindFirst(ClaimTypes.NameIdentifier);
+                if (claim == null || !long.TryParse(claim.Value, out long userId))
+                    return Unauthorized();
 
                 var file = Request.Form.Files["video"];
                 var productCode = Request.Form["product_code"].ToString();
