@@ -1,7 +1,9 @@
-﻿using Microsoft.EntityFrameworkCore;
-using WebCam_Project.DBContext;
-using Microsoft.AspNetCore.Authentication.Cookies;
+﻿using Microsoft.AspNetCore.Authentication.Cookies;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.FileProviders;
+using Npgsql;
+using System.Security.Claims;
+using WebCam_Project.DBContext;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -9,15 +11,13 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddRazorPages();
 
 builder.Services.AddDbContext<AppDbContext>(options =>
-    options.UseNpgsql(
-        builder.Configuration.GetConnectionString("DefaultConnection")
-    )
-);
+    options.UseNpgsql(builder.Configuration.GetConnectionString("DefaultConnection")));
 
 builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)
     .AddCookie(options =>
     {
-        options.LoginPath = "/Index";   // dùng popup login
+        options.LoginPath = "/Login";           // sửa thành trang login thật
+        options.AccessDeniedPath = "/AccessDenied";
         options.ExpireTimeSpan = TimeSpan.FromHours(8);
         options.SlidingExpiration = true;
     });
@@ -27,18 +27,13 @@ builder.Services.AddAuthorization();
 // ================= APP =================
 var app = builder.Build();
 
-// ===== STATIC FILES (wwwroot) =====
+// Static files
 app.UseStaticFiles();
 
-// ===== STATIC FILES: Uploads (ngoài wwwroot) =====
-var uploadsPath = Path.Combine(
-    builder.Environment.ContentRootPath,
-    "Uploads");
-
+// Uploads folder
+var uploadsPath = Path.Combine(builder.Environment.ContentRootPath, "Uploads");
 if (!Directory.Exists(uploadsPath))
-{
     Directory.CreateDirectory(uploadsPath);
-}
 
 app.UseStaticFiles(new StaticFileOptions
 {
@@ -46,10 +41,32 @@ app.UseStaticFiles(new StaticFileOptions
     RequestPath = "/Uploads"
 });
 
-// ===== PIPELINE ORDER (RẤT QUAN TRỌNG) =====
+// Pipeline
 app.UseRouting();
 
-app.UseAuthentication();   // ❗ BẮT BUỘC phải trước Authorization
+app.UseAuthentication();
+
+// ✅ Middleware set app.user_id cho RLS - PHIÊN BẢN ĐÚNG
+app.Use(async (context, next) =>
+{
+    if (context.User.Identity?.IsAuthenticated == true)
+    {
+        var userIdClaim = context.User.FindFirst(ClaimTypes.NameIdentifier)?.Value;
+        if (long.TryParse(userIdClaim, out long uid))
+        {
+            using var scope = context.RequestServices.CreateScope();
+            var db = scope.ServiceProvider.GetRequiredService<AppDbContext>();
+
+            await db.Database.ExecuteSqlRawAsync(
+                "SELECT set_config('app.user_id', @uid, true)",
+                new NpgsqlParameter("uid", uid.ToString())
+            );
+        }
+    }
+
+    await next();
+});
+
 app.UseAuthorization();
 
 app.MapRazorPages();

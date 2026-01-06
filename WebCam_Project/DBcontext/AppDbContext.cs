@@ -94,6 +94,11 @@ namespace WebCam_Project.DBContext
 
                 entity.Property(e => e.CreatedAt)
                       .HasColumnName("created_at");
+                entity.Property(e => e.ProductName)
+                     .HasColumnName("product_name")
+                     .HasMaxLength(50)
+                     .IsRequired(false);
+
 
                 /* ===== FK USER ===== */
                 entity.Property(e => e.UserId)

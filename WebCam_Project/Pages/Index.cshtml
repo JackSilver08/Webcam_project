@@ -840,7 +840,11 @@
     }
 
     /* ================== SCAN ================== */
-    setInterval(() => scanner.focus(), 300);
+       setInterval(() => {
+        if (running && !authModal._isShown) {
+            scanner.focus();
+        }
+    }, 300);
 
        scanner.addEventListener("keydown", async e => {
         if (!running) return;
@@ -954,9 +958,17 @@
         authMsg.innerText = "✅ Đăng nhập thành công";
         authMsg.className = "text-success small mt-3 text-center";
 
+        // 🔥 ADMIN → redirect
+        if (data.redirect) {
+            setTimeout(() => {
+                window.location.href = data.redirect;
+            }, 300);
+            return;
+        }
+
+        // 👤 USER → reload
         setTimeout(() => location.reload(), 500);
     }
-
       async function register() {
         authMsg.innerText = "";
         authMsg.className = "text-warning small mt-3 text-center";

@@ -7,8 +7,7 @@ using System.Security.Claims;
 using WebCam_Project.DBContext;
 using WebCam_Project.Models;
 using BCrypt.Net;
-using Microsoft.AspNetCore.Authentication;
-using Microsoft.AspNetCore.Authentication.Cookies;
+
 namespace WebCam_Project.Pages
 {
     public class IndexModel : PageModel
@@ -39,9 +38,34 @@ namespace WebCam_Project.Pages
 
         /* ================= LOGIN ================= */
         public async Task<IActionResult> OnPostLoginAsync(
-            string username,
-            string password)
+     string username,
+     string password)
         {
+            /* ================= ADMIN LOGIN ================= */
+            if (username == "admin" && password == "ad1234")
+            {
+                var claims = new List<Claim>
+        {
+            new Claim(ClaimTypes.Name, "admin"),
+            new Claim(ClaimTypes.Role, "ADMIN")
+        };
+
+                var identity = new ClaimsIdentity(
+                    claims,
+                    CookieAuthenticationDefaults.AuthenticationScheme);
+
+                await HttpContext.SignInAsync(
+                    CookieAuthenticationDefaults.AuthenticationScheme,
+                    new ClaimsPrincipal(identity));
+
+                return new JsonResult(new
+                {
+                    success = true,
+                    redirect = "/Admin"
+                });
+            }
+
+            /* ================= USER LOGIN ================= */
             var user = await _db.Users
                 .FirstOrDefaultAsync(x =>
                     x.Username == username && x.IsActive);
@@ -56,27 +80,24 @@ namespace WebCam_Project.Pages
                 });
             }
 
-            var claims = new List<Claim>
-{
-    new Claim(ClaimTypes.NameIdentifier, user.Id.ToString()),
-    new Claim(ClaimTypes.Name, user.Username),
-    new Claim(ClaimTypes.Role, user.Role)
-};
+            var claimsUser = new List<Claim>
+    {
+        new Claim(ClaimTypes.NameIdentifier, user.Id.ToString()),
+        new Claim(ClaimTypes.Name, user.Username),
+        new Claim(ClaimTypes.Role, user.Role)
+    };
 
-
-
-            var identity = new ClaimsIdentity(
-                claims,
+            var identityUser = new ClaimsIdentity(
+                claimsUser,
                 CookieAuthenticationDefaults.AuthenticationScheme);
 
             await HttpContext.SignInAsync(
                 CookieAuthenticationDefaults.AuthenticationScheme,
-                new ClaimsPrincipal(identity));
+                new ClaimsPrincipal(identityUser));
 
             return new JsonResult(new
             {
-                success = true,
-                username = user.Username
+                success = true
             });
         }
 

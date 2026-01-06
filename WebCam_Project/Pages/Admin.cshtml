@@ -1,0 +1,373 @@
+﻿@page
+@model WebCam_Project.Pages.AdminModel
+@{
+    ViewData["Title"] = "ADMIN PANEL";
+}
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+<style>
+    :root {
+        --bg-primary: #0f172a;
+        --bg-secondary: #1e293b;
+        --bg-tertiary: #334155;
+        --bg-card: rgba(30, 41, 59, 0.9);
+        --text-primary: #f1f5f9;
+        --text-secondary: #94a3b8;
+        --text-accent: #60a5fa;
+        --border-color: #475569;
+        --border-active: #3b82f6;
+        --success-color: #10b981;
+        --danger-color: #ef4444;
+        --warning-color: #f59e0b;
+        --primary-color: #6366f1;
+        --shadow-light: rgba(0, 0, 0, 0.1);
+        --shadow-medium: rgba(0, 0, 0, 0.2);
+        --shadow-heavy: rgba(0, 0, 0, 0.3);
+    }
+
+    body {
+        background-color: var(--bg-primary) !important;
+        color: var(--text-primary) !important;
+        min-height: 100vh;
+    }
+
+    .container {
+        background-color: var(--bg-primary);
+    }
+
+    h3, .h3 {
+        color: var(--text-primary) !important;
+    }
+
+    .text-muted {
+        color: var(--text-secondary) !important;
+    }
+
+    .card {
+        background-color: var(--bg-card) !important;
+        border: 1px solid var(--border-color) !important;
+        box-shadow: 0 4px 6px var(--shadow-medium) !important;
+        color: var(--text-primary) !important;
+    }
+
+    .card-header {
+        background-color: var(--bg-secondary) !important;
+        border-bottom: 1px solid var(--border-color) !important;
+        color: var(--text-primary) !important;
+    }
+
+    .card-body {
+        background-color: var(--bg-card);
+        color: var(--text-primary);
+    }
+
+    .list-group {
+        background-color: transparent !important;
+    }
+
+    .list-group-item {
+        background-color: var(--bg-secondary) !important;
+        border: 1px solid var(--border-color) !important;
+        color: var(--text-primary) !important;
+        transition: all 0.2s ease;
+    }
+
+        .list-group-item:hover {
+            background-color: var(--bg-tertiary) !important;
+            border-color: var(--border-color) !important;
+        }
+
+    .list-group-item-action:hover {
+        color: var(--text-accent) !important;
+    }
+
+    .active-user {
+        background-color: rgba(59, 130, 246, 0.15) !important;
+        border-left: 4px solid var(--border-active) !important;
+        color: var(--text-accent) !important;
+    }
+
+    .user-list {
+        max-height: 550px;
+        overflow-y: auto;
+        scrollbar-width: thin;
+        scrollbar-color: var(--bg-tertiary) var(--bg-secondary);
+    }
+
+        .user-list::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        .user-list::-webkit-scrollbar-track {
+            background: var(--bg-secondary);
+        }
+
+        .user-list::-webkit-scrollbar-thumb {
+            background-color: var(--bg-tertiary);
+            border-radius: 4px;
+        }
+
+    .form-control {
+        background-color: var(--bg-secondary) !important;
+        border: 1px solid var(--border-color) !important;
+        color: var(--text-primary) !important;
+    }
+
+        .form-control:focus {
+            background-color: var(--bg-tertiary) !important;
+            border-color: var(--border-active) !important;
+            color: var(--text-primary) !important;
+            box-shadow: 0 0 0 0.25rem rgba(59, 130, 246, 0.25) !important;
+        }
+
+    .form-label {
+        color: var(--text-secondary) !important;
+    }
+
+    .form-text {
+        color: var(--text-secondary) !important;
+    }
+
+    .btn-primary {
+        background-color: var(--primary-color) !important;
+        border-color: var(--primary-color) !important;
+        color: white !important;
+    }
+
+        .btn-primary:hover {
+            background-color: #4f46e5 !important;
+            border-color: #4f46e5 !important;
+        }
+
+    .btn-outline-secondary {
+        background-color: transparent !important;
+        border-color: var(--border-color) !important;
+        color: var(--text-secondary) !important;
+    }
+
+        .btn-outline-secondary:hover {
+            background-color: var(--bg-tertiary) !important;
+            border-color: var(--text-secondary) !important;
+            color: var(--text-primary) !important;
+        }
+
+    .video-card {
+        background: var(--bg-card) !important;
+        border: 1px solid var(--border-color) !important;
+        border-radius: 8px !important;
+        padding: 16px;
+        transition: all 0.3s ease;
+        margin-bottom: 16px;
+    }
+
+        .video-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px var(--shadow-heavy) !important;
+            border-color: var(--border-active) !important;
+        }
+
+    .meta {
+        font-size: .9rem;
+        color: var(--text-secondary) !important;
+    }
+
+    .chip {
+        display: inline-block;
+        padding: 4px 12px;
+        border-radius: 999px;
+        background: var(--bg-tertiary) !important;
+        font-size: .85rem;
+        color: var(--text-secondary) !important;
+        margin-right: 8px;
+        margin-bottom: 8px;
+        border: 1px solid var(--border-color) !important;
+    }
+
+    .alert-warning {
+        background-color: rgba(245, 158, 11, 0.15) !important;
+        border-color: rgba(245, 158, 11, 0.3) !important;
+        color: var(--warning-color) !important;
+    }
+
+    hr {
+        border-color: var(--border-color) !important;
+        opacity: 0.3;
+    }
+
+    video {
+        background-color: var(--bg-primary) !important;
+        border-radius: 6px;
+        border: 1px solid var(--border-color) !important;
+    }
+
+    .fw-bold, .fw-semibold {
+        color: var(--text-primary) !important;
+    }
+
+    .shadow-sm {
+        box-shadow: 0 2px 4px var(--shadow-medium) !important;
+    }
+</style>
+
+<div class="container py-4">
+    <div class="d-flex align-items-center justify-content-between mb-3">
+        <div>
+            <h3 class="mb-0">ADMIN – User Videos</h3>
+            <div class="text-muted">Quản lý, tìm kiếm và lọc video theo user / sản phẩm / ngày</div>
+        </div>
+    </div>
+
+    <div class="row g-3">
+        <!-- LEFT: USERS -->
+        <div class="col-lg-4">
+            <div class="card shadow-sm">
+                <div class="card-header fw-bold">
+                    Danh sách User
+                </div>
+
+                <div class="list-group list-group-flush user-list">
+                    @foreach (var u in Model.Users)
+                    {
+                        var isActive = Model.UserId.HasValue && Model.UserId.Value == u.Id;
+
+                        <a class="list-group-item list-group-item-action @(isActive ? "active-user" : "")"
+                           href="/Admin?userId=@u.Id">
+                            <div class="fw-semibold">@u.Username</div>
+                            <div class="meta">ID: @u.Id</div>
+                        </a>
+                    }
+                </div>
+            </div>
+        </div>
+
+        <!-- RIGHT: FILTER + VIDEOS -->
+        <div class="col-lg-8">
+            <div class="card shadow-sm mb-3">
+                <div class="card-header fw-bold">
+                    Bộ lọc
+                </div>
+                <div class="card-body">
+                    <form method="get" class="row g-2 align-items-end">
+                        <input type="hidden" name="userId" value="@Model.UserId" />
+
+                        <div class="col-md-6">
+                            <label class="form-label mb-1">Tìm theo mã hoặc tên sản phẩm</label>
+                            <input type="text"
+                                   name="keyword"
+                                   value="@Model.Keyword"
+                                   class="form-control"
+                                   placeholder="Ví dụ: SP001 hoặc Cây sen đá..." />
+                            <div class="form-text">Hệ thống sẽ tìm trong ProductCode và ProductName.</div>
+                        </div>
+
+                        <div class="col-md-3">
+                            <label class="form-label mb-1">Từ ngày</label>
+                            <input type="date"
+                                   name="fromDate"
+                                   value="@Model.FromDate?.ToString("yyyy-MM-dd")"
+                                   class="form-control" />
+                        </div>
+
+                        <div class="col-md-3">
+                            <label class="form-label mb-1">Đến ngày</label>
+                            <input type="date"
+                                   name="toDate"
+                                   value="@Model.ToDate?.ToString("yyyy-MM-dd")"
+                                   class="form-control" />
+                        </div>
+
+                        <div class="col-md-6 d-grid">
+                            <button type="submit" class="btn btn-primary">
+                                Lọc kết quả
+                            </button>
+                        </div>
+
+                        <div class="col-md-6 d-grid">
+                            <a class="btn btn-outline-secondary"
+                               href="/Admin?userId=@Model.UserId">
+                                Xóa bộ lọc
+                            </a>
+                        </div>
+                    </form>
+
+                    @if (Model.SelectedUser)
+                    {
+                        <hr />
+                        <div class="meta">
+                            <span class="chip">UserId: @Model.UserId</span>
+
+                            @if (!string.IsNullOrWhiteSpace(Model.Keyword))
+                            {
+                                <span class="chip">Keyword: @Model.Keyword</span>
+                            }
+
+                            @if (Model.FromDate.HasValue)
+                            {
+                                <span class="chip">From: @Model.FromDate.Value.ToString("dd/MM/yyyy")</span>
+                            }
+
+                            @if (Model.ToDate.HasValue)
+                            {
+                                <span class="chip">To: @Model.ToDate.Value.ToString("dd/MM/yyyy")</span>
+                            }
+                        </div>
+                    }
+                </div>
+            </div>
+
+            <div class="card shadow-sm">
+                <div class="card-header fw-bold">
+                    Video
+                </div>
+
+                <div class="card-body">
+                    @if (!Model.SelectedUser)
+                    {
+                        <div class="text-muted">
+                            Chọn 1 user ở danh sách bên trái để xem và lọc video.
+                        </div>
+                    }
+                    else if (!Model.Records.Any())
+                    {
+                        <div class="alert alert-warning mb-0">
+                            Không có video phù hợp với bộ lọc hiện tại.
+                        </div>
+                    }
+                    else
+                    {
+                        @foreach (var v in Model.Records)
+                        {
+                            <div class="video-card mb-3">
+                                <div class="d-flex justify-content-between flex-wrap gap-2">
+                                    <div>
+                                        <div class="fw-semibold">
+                                            @(string.IsNullOrWhiteSpace(v.ProductName) ? "Chưa có tên sản phẩm" : v.ProductName)
+                                        </div>
+                                        <div class="meta">
+                                            Mã: <span class="fw-semibold">@v.ProductCode</span>
+                                        </div>
+                                    </div>
+                                    <div class="meta text-end">
+                                        <div>@v.CreatedAt.ToLocalTime().ToString("dd/MM/yyyy HH:mm:ss")</div>
+                                        @if (!string.IsNullOrWhiteSpace(v.Status))
+                                        {
+                                            <div>Trạng thái: <span class="fw-semibold">@v.Status</span></div>
+                                        }
+                                    </div>
+                                </div>
+
+                                <div class="mt-2">
+                                    <video controls class="w-100 rounded">
+                                        <source src="/@v.VideoPath" type="video/webm" />
+                                    </video>
+                                </div>
+                            </div>
+                        }
+                    }
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>

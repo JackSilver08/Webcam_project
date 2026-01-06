@@ -33,6 +33,10 @@ namespace WebCam_Project.Models
         [Column("created_at")]
         public DateTime CreatedAt { get; set; }
 
+        [MaxLength(50)]
+        [Column("product_name")]
+        public string? ProductName { get; set; }
+
         /* ===== USER LINK ===== */
 
         [Required]
